@@ -1,20 +1,16 @@
-package com.diniz.hrworker.entities;
+package com.diniz.hrpayroll.entities;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Entity
-@Table(name = "tb_worker")
 public class Worker implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Double dailyIncome;
 
     public Worker() {
+
     }
 
     public Worker(Long id, String name, Double dailyIncome) {
