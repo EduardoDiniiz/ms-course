@@ -17,7 +17,7 @@ public class PaymentController {
     private PaymentService service;
 
     @GetMapping("/{workerId}/days/{days}")
-    public ResponseEntity<Payment> getPayment(@PathVariable Long workerId, @PathVariable int days) {
+    public ResponseEntity<Payment> findById(@PathVariable Long workerId, @PathVariable int days) {
         Payment payment = service.getPayment(workerId, days);
         return ResponseEntity.ok(payment);
     }
